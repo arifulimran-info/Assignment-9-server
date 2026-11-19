@@ -3,15 +3,19 @@
 REST API for **MentorLagbe**, a smart tuition & mentorship platform where Tutors post tuition batches,
 Students apply, and Admins moderate listings, users and Stripe revenue.
 
-- **Live URL (client):** _add here_
-- **Live URL (server):** _add here_
-- **Client repo:** _add here_
+- Live URL (client): https://a9-client.vercel.app
+
+- Live URL (server): https://assignment-9-server-ten.vercel.app
+- Client repo: https://github.com/arifulimran-info/A9-client
+- Server repo: https://github.com/arifulimran-info/Assignment-9-server
 
 ## Admin credentials
+
 - Email: `admin@mentorlagbe.com`
 - Password: `Admin@123456` (change in `.env` before seeding)
 
 ## Key features
+
 - BetterAuth (MongoDB adapter) with role selection on sign-up (student / tutor)
 - JWT verification + role middlewares: `verifyToken`, `verifyStudent`, `verifyTutor`, `verifyAdmin`
 - Server-side search, filters and pagination for approved tuitions
@@ -22,28 +26,32 @@ Students apply, and Admins moderate listings, users and Stripe revenue.
 - Seed script with 12 approved tuitions and sample applications
 
 ## Setup
+
 ```bash
 npm install
 cp .env.example .env   # fill in your values
 npm run seed           # optional demo data
 npm run dev
 ```
+
 Stripe webhook (local): `stripe listen --forward-to localhost:5000/api/payments/webhook`
 
 ## NPM packages
+
 express, cors, dotenv, mongodb, better-auth, jsonwebtoken, stripe
 
 ## Main endpoints
-| Method | Route | Access |
-|---|---|---|
-| ALL | `/api/auth/*` | BetterAuth |
-| GET | `/api/jwt` | session -> JWT |
-| GET | `/api/tuitions?search=&subject=&classLevel=&mode=&page=&limit=` | public |
-| GET | `/api/tuitions/latest`, `/filters`, `/:id` | public |
-| POST/PATCH/DELETE | `/api/tuitions`, `/:id`, `/:id/toggle` | tutor |
-| POST | `/api/applications` | student |
-| GET/PATCH | `/api/applications/applicants`, `/:id/status` | tutor |
-| GET/DELETE | `/api/applications/mine`, `/:id` | student |
-| GET/PATCH | `/api/users/me` | any user |
-| POST | `/api/payments/create-checkout-session`, `/verify` | student/tutor |
-| GET | `/api/admin/stats`, `/users`, `/tuitions`, `/transactions` | admin |
+
+| Method            | Route                                                           | Access         |
+| ----------------- | --------------------------------------------------------------- | -------------- |
+| ALL               | `/api/auth/*`                                                   | BetterAuth     |
+| GET               | `/api/jwt`                                                      | session -> JWT |
+| GET               | `/api/tuitions?search=&subject=&classLevel=&mode=&page=&limit=` | public         |
+| GET               | `/api/tuitions/latest`, `/filters`, `/:id`                      | public         |
+| POST/PATCH/DELETE | `/api/tuitions`, `/:id`, `/:id/toggle`                          | tutor          |
+| POST              | `/api/applications`                                             | student        |
+| GET/PATCH         | `/api/applications/applicants`, `/:id/status`                   | tutor          |
+| GET/DELETE        | `/api/applications/mine`, `/:id`                                | student        |
+| GET/PATCH         | `/api/users/me`                                                 | any user       |
+| POST              | `/api/payments/create-checkout-session`, `/verify`              | student/tutor  |
+| GET               | `/api/admin/stats`, `/users`, `/tuitions`, `/transactions`      | admin          |
