@@ -43,7 +43,7 @@ express, cors, dotenv, mongodb, better-auth, jsonwebtoken, stripe
 ## Main endpoints
 
 | Method            | Route                                                           | Access         |
-| ----------------- | --------------------------------------------------------------- | -------------- |
+| --------------------------------------------------------------- | -------------- |
 | ALL               | `/api/auth/*`                                                   | BetterAuth     |
 | GET               | `/api/jwt`                                                      | session -> JWT |
 | GET               | `/api/tuitions?search=&subject=&classLevel=&mode=&page=&limit=` | public         |
@@ -55,3 +55,4 @@ express, cors, dotenv, mongodb, better-auth, jsonwebtoken, stripe
 | GET/PATCH         | `/api/users/me`                                                 | any user       |
 | POST              | `/api/payments/create-checkout-session`, `/verify`              | student/tutor  |
 | GET               | `/api/admin/stats`, `/users`, `/tuitions`, `/transactions`      | admin          |
+
