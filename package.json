@@ -1,0 +1,21 @@
+{
+  "name": "mentorlagbe-server",
+  "version": "1.0.0",
+  "description": "MentorLagbe - Smart Tuition & Mentorship Platform (API server)",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "seed": "node src/seed.js"
+  },
+  "dependencies": {
+    "better-auth": "^1.7.26",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.22.0",
+    "stripe": "^17.5.0"
+  }
+}
