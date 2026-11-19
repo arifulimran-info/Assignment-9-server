@@ -14,6 +14,26 @@ Students apply, and Admins moderate listings, users and Stripe revenue.
 - Email: admin@mentorlagbe.com
 - Password: Admin@123456 
 
+Tutor
+Email: tutor1@mentorlagbe.com
+Password: Pass@123456
+
+Email: tutor2@mentorlagbe.com
+Password: Pass@123456
+
+Email: tutor3@mentorlagbe.com
+Password: Pass@123456
+
+Student
+Email: student1@mentorlagbe.com
+Password: Pass@123456
+
+Email: student2@mentorlagbe.com
+Password: Pass@123456
+
+Email: student3@mentorlagbe.com
+Password: Pass@123456
+
 ## Key features
 
 - BetterAuth (MongoDB adapter) with role selection on sign-up (student / tutor)
