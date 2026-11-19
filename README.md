@@ -11,8 +11,8 @@ Students apply, and Admins moderate listings, users and Stripe revenue.
 
 ## Admin credentials
 
-- Email: `admin@mentorlagbe.com`
-- Password: `Admin@123456` (change in `.env` before seeding)
+- Email: admin@mentorlagbe.com
+- Password: Admin@123456 
 
 ## Key features
 
